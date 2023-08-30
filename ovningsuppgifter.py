@@ -42,24 +42,20 @@ veg = (tvaveg*2) + (treveg*3)
 # paket = math.ceil(korv/8)
 # vegpaket = math.ceil(veg/4)
 
-
+paket = korv/8
 if korv%8 > 0:
-    paket = int(korv/8) + 1
-else:
-    paket = int(korv/8)
+    paket += 1
 
+vegpaket = veg/4
 if veg%4 > 0:    
-    vegpaket = int(veg/4) + 1
-else:
-    vegpaket = int(veg/4)
-
+    vegpaket += 1
 
 kostnad = (paket*20.95) + (vegpaket*34.95) + (elever*13.95)
 
-print("Vanlig korv: " + str(paket))
-print("Vegansk korv: " + str(vegpaket))
+print("Vanlig korv: " + str(round(paket)) + " paket.")
+print("Vegansk korv: " + str(round(vegpaket)) + " paket.")
 print("Dryck: " + str(elever))
-print(str(kostnad) + " SEK")
+print(str(round(kostnad)) + " SEK")
 
 
 
