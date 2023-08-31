@@ -117,9 +117,11 @@ import random
 #      print("Du är varken från Norden eller Storbrittanien")
 
 #3.5
-# sex = input("Ange kön")
-# hair = input("Ange hårfärg")
-# eyes = input("Ange ögonfärg")
+sex = input("Ange kön")
+hair = input("Ange hårfärg")
+eyes = input("Ange ögonfärg")
+
+
 
 # 4.1
 # minnum = 0

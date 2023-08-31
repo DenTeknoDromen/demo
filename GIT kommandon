@@ -1,0 +1,13 @@
+ls - lista på innehåll i directory
+cd - change directory, byt arbetsfolder i bash
+
+git status - gitstatus på filer i nuvarande folder, visar filer som ska stagas och vilka ändringar som ska commitas
+git add [FILNAMN] - stagear en fil till att commitas
+git config --list - visar alla inställningar
+git branch - visar nuvarande branch
+git branch [NYTT BRANCH NAMN]- skapar en ny branch
+git checkout - byter branch
+git log - visar ändringshistoriken 
+git commit -m [meddelande] - lägger till ändringar till nuvarande branchen, -m lägger till meddelande
+git push - pushar nuvarande branch till destination
+
