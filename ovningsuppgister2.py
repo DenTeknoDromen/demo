@@ -115,12 +115,8 @@ import random
 #      print("Du är från Storbrittanien")
 # else:
 #      print("Du är varken från Norden eller Storbrittanien")
-
+#
 #3.5
-sex = input("Ange kön")
-hair = input("Ange hårfärg")
-eyes = input("Ange ögonfärg")
-
 
 
 # 4.1
@@ -154,7 +150,8 @@ eyes = input("Ange ögonfärg")
 #           yesno = input("Fortsätt? Y/N)")
 #     i += 1
 
-#4.3
+
+##4.3
 # rnd = random.randint(0,99)
 # numinput= -1
 # numtry = 0

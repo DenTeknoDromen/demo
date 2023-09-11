@@ -9,5 +9,5 @@ git branch [NYTT BRANCH NAMN]- skapar en ny branch
 git checkout - byter branch
 git log - visar ändringshistoriken 
 git commit -m [meddelande] - lägger till ändringar till nuvarande branchen, -m lägger till meddelande
-git push - pushar nuvarande branch till destination
+git push origin main - pushar nuvarande branch till destination
 
