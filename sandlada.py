@@ -1,3 +1,5 @@
-namn = "Tobias"
-num = int(1000)
-print(f"Hej {namn}! Du är {num} gånger bäst!")
+test = ["Hej", "Hej", "Hej", "Hej"]
+#print([x for x in test])
+#test = [x for x in test]
+x = " ".join(test)
+print(x)
