@@ -12,6 +12,9 @@ cpupile = []
 score = 0
 cpuscore = 0
 
+# Används för att kolla om användar input är valid
+# Funkar till alla input i programmet
+
 
 def parse(opt1, opt2, inpt):
     if inpt == opt1 or inpt == opt2:
@@ -21,22 +24,27 @@ def parse(opt1, opt2, inpt):
                                        f"{opt1} eller {opt2}: "))
 
 
+# Huvudfunktion som används för att hålla spelet igång
+# Används två gånger, en gång för användaren och en gång för datorn
 def drakort(humancheck, currpile, currscore):
     more = "y"
     while more == "y":
         value = random.randint(2, 14)
+        # Skapar ett kort som str genom att slumpa fram färg och valör
         kort = f"{color[random.randint(1,4)]} {kortnamn[value]}"
+        # Kollar att kortet inte dragits redan
         if kort in pile:
             continue
-        pile.append(kort)
+        pile.append(kort)  # Pile innehåller gamla kort
         currpile.append(kort)
         print(f"{kort} \n")
+        # Kollar genom parsefunktionen vilket värde användaren vill ha
         if value == 14:
             if humancheck:
                 value = int(parse("1", "14", (input("Du fick ett Ess! Välj "
                                                     "värde genom att skriva 1 "
                                                     "eller 14: "))))
-            elif humancheck == 0:
+            elif humancheck == 0:  # Datorn väljer alltid 0
                 value = 1
         currscore += value
         if currscore > 21:
@@ -44,10 +52,11 @@ def drakort(humancheck, currpile, currscore):
         if humancheck:
             more = parse("y", "n", input("Vill du dra ett till "
                                          "kort? y/n: ").casefold())
+        # Datorn slutar alltid dra nya kort över 14 poäng
         elif currscore >= 14:
             more = "n"
         time.sleep(1)
-    return currscore
+    return currscore  # returnerar currscore till
 
 
 if os.name == "nt":
@@ -55,6 +64,7 @@ if os.name == "nt":
 elif os.name == "posix":
     os.system("clear")
 
+# Interface
 print("--------------------")
 print("Din tur:")
 score = drakort(bool(1), yourpile, score)

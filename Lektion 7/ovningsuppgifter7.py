@@ -43,7 +43,6 @@ import json
 # indata = indata.replace("å", "a")
 # indata = indata.replace("ä", "a")
 # indata = indata.replace("ö", "o")
-# indata = indata.casefold()
 
 # url = ("https://54qhf521ze.execute-api.eu-north-1.amazonaws.com/weather/"
 #        f"{indata}")
