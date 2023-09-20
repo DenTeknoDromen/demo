@@ -1,0 +1,4 @@
+persons=[
+'Alice','Lucas','Olivia',
+'Liam','Astrid','William'
+]
